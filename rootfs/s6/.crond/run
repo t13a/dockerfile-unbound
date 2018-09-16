@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -euo pipefail
+
+exec crond -f -d "${CROND_LOG_LEVEL}" ${CROND_EXTRA_ARGS:-}

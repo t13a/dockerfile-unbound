@@ -1,0 +1,15 @@
+server:
+    verbosity: 3 # output query level information
+    interface: 0.0.0.0
+    interface: ::
+    access-control: 0.0.0.0/0 allow
+    access-control: ::/0 allow
+    logfile: "" # output to stderr
+    root-hints: /etc/unbound/root.hints
+    trust-anchor-file: "/usr/share/dnssec-root/trusted-key.key"
+
+forward-zone:
+    name: "."
+    forward-tls-upstream: yes
+    forward-addr: 1.1.1.1@853
+    forward-addr: 1.0.0.1@853

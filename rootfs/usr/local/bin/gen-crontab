@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -euo pipefail
+
+cat << EOF
+# min hour day month weekday command
+${ROOT_HINTS_UPDATE_SCHEDULE} /etc/periodic/monthly/update-unbound-root-hints
+EOF
